@@ -118,7 +118,15 @@
     // Sum up the instances of each of these
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck'];
 
-    const analyzeData = data.reduce((sum, dataPoint) => )
+    const transportation = data.reduce(function(obj, item){
+        if(!obj[item]) {
+            obj[item] = 0;
+        }
+        obj[item] += 1;
+        return obj;
+    }, {});
+
+    console.log(transportation);
 
 
 
